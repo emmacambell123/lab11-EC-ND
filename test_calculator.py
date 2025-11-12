@@ -37,23 +37,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             logarithm(1, 10)
 
-    # Partner 1 tests (left blank intentionally)
 
-    # def test_multiply(self):
-    #     pass
-
-    # def test_divide(self):
-    #     pass
-
-    # def test_log_invalid_argument(self):
-    #     pass
-
-    # def test_hypotenuse(self):
-    #     pass
-
-    # def test_sqrt(self):
-    #     pass
-
-
+# DO NOT PRINT ANYTHING EXTRA
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=1)
