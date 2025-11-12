@@ -7,7 +7,8 @@ from calculator import *
 
 
 class TestCalculator(unittest.TestCase):
-    ######### Partner 2 Tests #########
+
+    # Partner 2 tests
 
     def test_add(self):
         self.assertEqual(add(1, 2), 3)
@@ -24,11 +25,8 @@ class TestCalculator(unittest.TestCase):
             divide(10, 0)
 
     def test_logarithm(self):
-        # log_10(1000) = 3
         self.assertAlmostEqual(logarithm(10, 1000), 3.0)
-        # log_2(8) = 3
         self.assertAlmostEqual(logarithm(2, 8), 3.0)
-        # log_5(25) = 2
         self.assertAlmostEqual(logarithm(5, 25), 2.0)
 
     def test_log_invalid_base(self):
@@ -36,4 +34,26 @@ class TestCalculator(unittest.TestCase):
             logarithm(0, 10)
         with self.assertRaises(ValueError):
             logarithm(-2, 10)
-        with sel
+        with self.assertRaises(ValueError):
+            logarithm(1, 10)
+
+    # Partner 1 tests (left blank intentionally)
+
+    # def test_multiply(self):
+    #     pass
+
+    # def test_divide(self):
+    #     pass
+
+    # def test_log_invalid_argument(self):
+    #     pass
+
+    # def test_hypotenuse(self):
+    #     pass
+
+    # def test_sqrt(self):
+    #     pass
+
+
+if __name__ == "__main__":
+    unittest.main()
