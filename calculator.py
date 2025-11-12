@@ -10,7 +10,7 @@ Defines functions used to create a simple calculator.
 import math
 
 
-# ---- Functions originally from Partner 1 ----
+# ---- Partner 1 functions ----
 
 def square_root(a):
     """
@@ -31,7 +31,7 @@ def hypotenuse(a, b):
     return math.hypot(a, b)
 
 
-# ---- Functions implemented by Partner 2 ----
+# ---- Core calculator functions ----
 
 def add(a, b):
     """
@@ -40,21 +40,21 @@ def add(a, b):
     return a + b
 
 
-def sub(a, b):
+def subtract(a, b):
     """
     Return the result of a - b.
     """
     return a - b
 
 
-def mul(a, b):
+def multiply(a, b):
     """
     Return the product of a and b.
     """
     return a * b
 
 
-def div(a, b):
+def divide(a, b):
     """
     Return the result of a / b.
 
@@ -66,7 +66,7 @@ def div(a, b):
     return a / b
 
 
-def log(a, b):
+def logarithm(a, b):
     """
     Return the logarithm of b with base a, i.e. log_a(b).
 
@@ -82,8 +82,16 @@ def log(a, b):
     return math.log(b, a)
 
 
-def exp(a, b):
+def exponentiate(a, b):
     """
     Return a raised to the power of b (a ** b).
     """
     return a ** b
+
+
+# OPTIONAL: keep the short aliases if you want (not required, but harmless)
+# sub = subtract
+# mul = multiply
+# div = divide
+# log = logarithm
+# exp = exponentiate
