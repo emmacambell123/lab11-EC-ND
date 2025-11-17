@@ -5,51 +5,49 @@
 """
 calculator.py
 Defines functions used to create a simple calculator.
+
 """
 
 import math
 
 
-# ---- Partner 1 functions ----
-
-def square_root(a):
-    """
-    Return the square root of a.
-
-    Raises:
-        ValueError: If a is negative.
-    """
-    if a < 0:
-        raise ValueError("square_root is undefined for negative numbers.")
-    return math.sqrt(a)
-
-
-def hypotenuse(a, b):
-    """Return the length of the hypotenuse."""
-    return math.hypot(a, b)
-
-
-# ---- Core required functions ----
-
 def add(a, b):
+    """Return a + b."""
     return a + b
 
 
 def subtract(a, b):
+    """Return a - b."""
     return a - b
 
 
-def multiply(a, b):
+def mul(a, b):
+    """Return a * b."""
     return a * b
 
 
-def divide(a, b):
+def div(a, b):
+    """
+    Return a / b.
+
+    Raises:
+        ZeroDivisionError: if b == 0.
+    """
     if b == 0:
         raise ZeroDivisionError("Division by zero is undefined.")
     return a / b
 
 
 def logarithm(a, b):
+    """
+    Return log_a(b) using math.log(b, a).
+
+    Raises:
+        ValueError: if
+            - base a <= 0
+            - base a == 1
+            - argument b <= 0
+    """
     if a <= 0 or a == 1:
         raise ValueError("Logarithm base must be positive and not equal to 1.")
     if b <= 0:
@@ -57,13 +55,25 @@ def logarithm(a, b):
     return math.log(b, a)
 
 
-def exponentiate(a, b):
+def exp(a, b):
+    """Return a ** b."""
     return a ** b
 
 
-# ---- Short aliases required by autograder ----
-mul = multiply
-div = divide
-exp = exponentiate
-log = logarithm
-sub = subtract
+def square_root(a):
+    """
+    Return the square root of a.
+
+    Raises:
+        ValueError: if a < 0.
+    """
+    if a < 0:
+        raise ValueError("square_root is undefined for negative numbers.")
+    return math.sqrt(a)
+
+
+def hypotenuse(a, b):
+    """
+    Return the length of the hypotenuse given legs a and b.
+    """
+    return math.hypot(a, b)
